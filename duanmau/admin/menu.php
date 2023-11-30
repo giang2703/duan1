@@ -1,8 +1,9 @@
 <nav id="sidebar">
     <div class="sidebar-header">
         <a href="<?= $SITE_URL ?>/trang-chinh/">
-            <img src="<?= $CONTENT_URL ?>/images/logo.png" alt="logo" class="img-fluid logo">
+            <img src="<?= $CONTENT_URL ?>/images/logo.jpg" alt="logo" class="img-fluid logo">
         </a>
+        <br>
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>
@@ -50,10 +51,10 @@
             </a>
             <ul class="collapse list-unstyled" id="produ">
                 <li>
-                    <a href="<?= $ADMIN_URL ?>/tin-tuc/"><i class="fas fa-plus"></i>Thêm tin tức</a>
+                    <a href="<?= $ADMIN_URL ?>/tin_tuc/"><i class="fas fa-plus"></i>Thêm tin tức</a>
                 </li>
                 <li>
-                    <a href="<?= $ADMIN_URL ?>/tin-tuc/index.php?btn_list">
+                    <a href="<?= $ADMIN_URL ?>/tin_tuc/index.php?btn_list">
                         <i class="fas fa-list-ul"></i>Danh sách tin tức</a>
                 </li>
             </ul>

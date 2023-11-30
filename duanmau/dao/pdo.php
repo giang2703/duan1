@@ -18,6 +18,9 @@ function pdo_execute($sql)
     try {
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
+        // var_dump($sql);
+        // var_dump($sql_args);
+        // die();
         $stmt->execute($sql_args);
     } catch (PDOException $e) {
         throw $e;

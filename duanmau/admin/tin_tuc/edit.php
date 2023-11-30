@@ -67,10 +67,8 @@ if (is_file($img_path)) {  //kt tệp hình ảnh tại đg dẫn $img_path có 
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-sm-4">
-                            <label for="noi_dung" class="form-label">Nội dung</label>
-                            <input type="text" name="noi_dung" id="don_gia" class="form-control" value="<?= $noi_dung ?>">
-                        </div>
+                        
+
     
                     </div>
                     <div class="row">
@@ -89,10 +87,10 @@ if (is_file($img_path)) {  //kt tệp hình ảnh tại đg dẫn $img_path có 
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-12">
-                            <label for="mo_ta" class="form-label">Mô tả sản phẩm</label>
-                                <textarea id="txtarea" spellcheck="false" name="mo_ta"
+                            <label for="noi_dung" class="form-label">Nội dung</label>
+                                <textarea id="txtarea" spellcheck="false" name="noi_dung"
                                 class="form-control form-control-lg mb-3" id="textareaExample"
-                                rows="3"><?= $mo_ta ?></textarea>
+                                rows="3"><?= $noi_dung ?></textarea>
                         </div>
                     </div>
 

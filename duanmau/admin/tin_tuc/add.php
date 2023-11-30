@@ -46,41 +46,42 @@
                     </div>
                     <!-- cho phép người dùng tải hình ảnh sản phẩm lên web -->
                     <div class="row">
-                        <div class="form-group col-sm-4">
+                        <div class="form-group col-sm-12">
                             <label for="hinh" class="form-label">Ảnh tin tức</label>
                             <input type="file" name="hinh" id="hinh" class="form-control">
                         </div>
-                        <div class="form-group col-sm-4">
-                            <label for="noi_dung" class="form-label">Nội dung</label>
-                            <input type="text" name="noi_dung" id="don_gia" class="form-control" value="<?= $noi_dung ?>">
+                        <div class="form-group col-sm-12">
+                            <label for="mo_ta" class="form-label">Mô tả</label>
+                            <textarea id="txtarea" spellcheck="false" name="mo_ta"
+                                class="form-control form-control-lg mb-3" id="textareaExample" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="row">
 
-                    </div>
 
-                        <div class="form-group col-sm-4">
-                            <!-- lấy ngày hiện tại và định dạng nó thành chuỗi theo định dạng 'Y-m-d' (năm-tháng-ngày). 
-                            Kết quả được lưu trong biến $today để sử dụng làm giá trị mặc định cho trường nhập liệu ngày. -->
-                            <?php $today = date_format(date_create(), 'Y-m-d'); ?>
-                            <label for="ngay" class="form-label">Ngày nhập</label>
-                            <input type="date" name="ngay" id="ngay" class="form-control"
-                                value="<?= $today ?>">
-                                <!-- tức là ngày hiện tại được hiển thị là giá trị mặc định khi trang web được tải. 
-                                Người dùng có thể thay đổi ngày này nếu cần. -->
-                        </div>
-                        <!-- hiển thị lượt xem  -->
-                        <div class="form-group col-sm-4">
-                            <label for="luot_xem" class="form-label">Số lượt xem</label>
-                            <input type="text" name="luot_xem" id="luot_xem" readonly class="form-control"
-                                value="0">
-                        </div>
+                                        
+                    <div class="form-group col-sm-6">
+                        <!-- lấy ngày hiện tại và định dạng nó thành chuỗi theo định dạng 'Y-m-d' (năm-tháng-ngày). 
+                        Kết quả được lưu trong biến $today để sử dụng làm giá trị mặc định cho trường nhập liệu ngày. -->
+                        <?php $today = date_format(date_create(), 'Y-m-d'); ?>
+                        <label for="ngay" class="form-label">Ngày nhập</label>
+                        <input type="date" name="ngay" id="ngay" class="form-control"
+                            value="<?= $today ?>">
+                            <!-- tức là ngày hiện tại được hiển thị là giá trị mặc định khi trang web được tải. 
+                            Người dùng có thể thay đổi ngày này nếu cần. -->
                     </div>
-                    <!-- mô tả sản phẩm  -->
+                    <!-- hiển thị lượt xem  -->
+                    <div class="form-group col-sm-6">
+                        <label for="luot_xem" class="form-label">Số lượt xem</label>
+                        <input type="text" name="luot_xem" id="luot_xem" readonly class="form-control"
+                            value="0">
+                    </div>
+                    </div>
+                    <!-- nội dung -->
                     <div class="row">
                         <div class="form-group col-sm-12">
-                            <label for="mo_ta" class="form-label">Mô tả sản phẩm</label>
-                            <textarea id="txtarea" spellcheck="false" name="mo_ta"
+                            <label for="noi_dung" class="form-label">Nội dung</label>
+                            <textarea id="txtarea" spellcheck="false" name="noi_dung"
                                 class="form-control form-control-lg mb-3" id="textareaExample" rows="3"></textarea>
                         </div>
                     </div>

@@ -18,7 +18,7 @@ if (exist_param("btn_list")) { //Đây là một điều kiện kiểm tra xem t
 //Trong trường hợp này, mã sẽ thực hiện các thao tác để hiển thị danh sách sản phẩm (hàng hóa).
 
     //show dữ liệu
-    $items = hang_hoa_select_page('ma', 10);
+    $items = tin_tuc_select_page('ma', 10);
     //hang_hoa_select_page() để lấy danh sách sản phẩm (hàng hóa) từ cơ sở dữ liệu. 
     //Nó sử dụng "ma_hh" làm trường sắp xếp và giới hạn kết quả trả về thành 10 sản phẩm. 
     //Dữ liệu này sau đó được gán vào biến $items để sử dụng trong việc hiển thị.
@@ -33,7 +33,6 @@ if (exist_param("btn_list")) { //Đây là một điều kiện kiểm tra xem t
     $tieu_de = $_POST['tieu_de'];
     $noi_dung = $_POST['noi_dung'];
     $ngay = $_POST['ngay'];
-    $hinh = $_POST['hinh'];
     $luot_xem = $_POST['luot_xem'];
     $ma_loai = $_POST['ma_loai'];
     //cả hai phần này tương ứng với hai tình huống khác nhau: 
@@ -52,7 +51,7 @@ if (exist_param("btn_list")) { //Đây là một điều kiện kiểm tra xem t
     // cho phép sử dụng các hàng động sửa đổi là nơi người có thể thực hiện các hành động khác nhau thông qua giao diện
     #lấy dữ liệu từ form biểu mẩu 
     $ma = $_REQUEST['ma']; // lấy giá trị của tham số có tên ma_hh và gán cho biến $ma_hh
-    $tin_tuc_info = hang_hoa_select_by_id($ma); // lấy thông tin về về hh 
+    $tin_tuc_info = tin_tuc_select_by_id($ma); // lấy thông tin về về hh 
     // lấy giá ma_hh để gọi hàm hang_hoa_select_by_id để lấy thông tin từ csdl
     // kết quả sẽ được gán vào $hang_hoa_info  
     extract($tin_tuc_info); // trích xuất các phần tử mảng $hang_hoa_info thành các phần tử riêng lê -> truy cập thông tin dễ dnagf hơn
@@ -75,7 +74,7 @@ if (exist_param("btn_list")) { //Đây là một điều kiện kiểm tra xem t
     try {
 
         $arr_ma = $_POST['ma'];
-        hang_hoa_delete($arr_ma);
+        tin_tuc_delete($arr_ma);
         $MESSAGE = "Xóa thành công!";
     } catch (Exception $exc) {
         $MESSAGE = "Xóa thất bại!";
@@ -89,7 +88,7 @@ if (exist_param("btn_list")) { //Đây là một điều kiện kiểm tra xem t
     $tieu_de = $_POST['tieu_de'];
     $noi_dung = $_POST['noi_dung'];
     $ngay = $_POST['ngay'];
-    $hinh = $_POST['hinh'];
+    
     $luot_xem = $_POST['luot_xem'];
     $ma_loai = $_POST['ma_loai'];
 

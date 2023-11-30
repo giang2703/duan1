@@ -3,7 +3,7 @@ require_once 'pdo.php';
 // Hàm thêm một sản phẩm hàng hóa mới vào cơ sở dữ liệu
 function tin_tuc_insert($tieu_de, $noi_dung, $ngay, $hinh, $luot_xem, $ma_loai)
 {
-    $sql = "INSERT INTO tin_tuc(tieu_de, noi_dung, ngay, hinh, luot_xem, ma_loai) VALUES (?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO tin_tuc(tieu_de, noi_dung, ngay, hinh, luot_xem, ma_loai) VALUES (?,?,?,?,?,?)";
     pdo_execute($sql, $tieu_de, $noi_dung, $ngay, $hinh, $luot_xem, $ma_loai);
 }
 // Hàm cập nhật thông tin sản phẩm hàng hóa
