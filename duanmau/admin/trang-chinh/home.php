@@ -1,4 +1,12 @@
 <link rel="stylesheet" href="<?= $CONTENT_URL ?>/css/dashboard.css" type="text/css">
+<style>
+    /* CSS cho hiệu ứng hover */
+    #sidebar ul li a:hover {
+        color: #fff !important; /* Màu khi di chuột lên */
+        background-color: #B495C9 ;
+    }
+</style>
+
 <div class="container">
     <div class="cards row mt-5">
         <div class="card-single col d-flex justify-content-around bg-success text-white py-5 ml-3 ">

@@ -1,7 +1,51 @@
+<style>
+        /* CSS để tạo kiểu cho danh sách */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            text-align: center;  
+            font-weight: bold; 
+            color: #C19FD6 ;  
+        }
+
+        .btn-success,
+        .btn-primary,
+        .btn-danger{
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #B495C9;
+        }
+
+        .btn-success:hover,
+        .btn-primary:hover,
+        .btn-danger:hover {
+            background-color: #B495C9;
+            border: 1px solid #B495C9;
+
+        }
+
+    </style>
+
+<div class="container mt-2">
 <div class="row">
     <div class="col-lg-12">
-        <div class="card">
-            <div class="card-header text-center bg-dark text-white text-uppercase">Thêm mới tin tức</div>
+
+    <h2>Thêm mới tin tức</h2>
             <div class="card-body">
                 <form action="index.php" method="POST" enctype="multipart/form-data" id="add_tin_tuc">
                     <!--  action="index.php"xác định URL mà biểu mẫu sẽ được gửi đến khi người dùng nhấn nút gửi (Submit).-->

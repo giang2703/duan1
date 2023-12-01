@@ -1,8 +1,5 @@
 <style>
-    .fa-shopping-cart:hover,
-    .dropdown-toggle:hover {
-        color: #C19FD6 !important; 
-    }
+    
 
     .custom-search:focus {
     border-color: #C19FD6 ;        
@@ -12,9 +9,11 @@
         position: relative;
     }
 
-    .badge.bg-danger {
-        
-    }
+    
+
+
+
+    
 </style>
 
 
@@ -56,9 +55,9 @@
             <div class="ms-lg-4 d-flex align-items-center">
                 <a href="<?= $SITE_URL . "/cart/list-cart.php" ?>" class="text-black me-3 cart-icon" style="font-size: 18px;">
                     <i class="fa fa-shopping-cart fs-4"></i>
-                    <span class="badge bg-danger">
+                    <sup class="badge" style="margin-right: 15px;color: #CA0E00; border: 1px solid #CA0E00;">
                         <?= isset($_SESSION['total_cart']) ? $_SESSION['total_cart'] : 0 ?>
-                    </span>
+                    </sup>
                 </a>
                 <div class="dropdown user-dropdown" >
                     <a class="dropdown-toggle text-black" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">

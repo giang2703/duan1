@@ -8,10 +8,55 @@ if (is_file($img_path)) {
     $img = "no photo";
 }
 ?>
+
+<style>
+        /* CSS để tạo kiểu cho danh sách */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;  
+            font-weight: bold; 
+            color: #C19FD6 ;  
+        }
+
+        .btn-success,
+        .btn-primary,
+        .btn-danger{
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #B495C9;
+        }
+
+        .btn-success:hover,
+        .btn-primary:hover,
+        .btn-danger:hover {
+            background-color: #B495C9;
+            border: 1px solid #B495C9;
+
+        }
+
+    </style>
+
+<div class="container mt-5">
 <div class="row">
     <div class="col-lg-12">
-        <div class="card">
-            <div class="card-header text-center bg-dark text-white text-uppercase">Cập nhật khách hàng</div>
+
+    <h2>Cập nhật khách hàng</h2>
             <div class="card-body">
                 <form action="index.php?btn_update" method="POST" enctype="multipart/form-data" id="admin_update_kh">
                     <!-- xác định URL "index.php?btn_update" cho action của biểu mẫu được gửi đến khi nó được submit và cấu hình biểu mẫu để gửi dữ liệu 
@@ -68,12 +113,12 @@ if (is_file($img_path)) {
                             <div class="form-control">
                                 <label class="radio-inline  mr-3">
                                     <input type="radio" value="0" name="kich_hoat"
-                                        <?= !$kich_hoat ? 'checked' : '' ?>>Chưa kích
+                                        <?= !$kich_hoat ? 'checked' : '' ?>> Chưa kích
                                     hoạt
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" value="1" name="kich_hoat"
-                                        <?= $kich_hoat ? 'checked' : '' ?>>Kích hoạt
+                                        <?= $kich_hoat ? 'checked' : '' ?>> Kích hoạt
                                 </label>
                             </div>
                         </div>
@@ -81,11 +126,11 @@ if (is_file($img_path)) {
                             <label>Kích hoạt?</label>
                             <div class="form-control">
                                 <label class="radio-inline mr-3">
-                                    <input type="radio" value="0" name="vai_tro" <?= !$vai_tro ? 'checked' : '' ?>>Khách
+                                    <input type="radio" value="0" name="vai_tro" <?= !$vai_tro ? 'checked' : '' ?>> Khách
                                     hàng
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" value="1" name="vai_tro" <?= $vai_tro ? 'checked' : '' ?>>Nhân
+                                    <input type="radio" value="1" name="vai_tro" <?= $vai_tro ? 'checked' : '' ?>> Nhân
                                     viên
                                 </label>
                             </div>

@@ -1,3 +1,13 @@
+<style>
+    /* CSS cho hiệu ứng hover */
+    #sidebar ul li a:hover {
+        color: #fff !important; /* Màu khi di chuột lên */
+        background-color: #B495C9 ;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <nav id="sidebar">
     <div class="sidebar-header">
         <a href="<?= $SITE_URL ?>/trang-chinh/">
@@ -7,10 +17,10 @@
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>
-            <a href="<?= $SITE_URL ?>/trang-chinh/"><i class="fas fa-store"></i>Xem trang web</a>
+            <a href="<?= $SITE_URL ?>/trang-chinh/"><i class="fa-solid fa-eye"></i> Xem trang web</a>
         </li>
         <li>
-            <a href="<?= $ADMIN_URL ?>/trang-chinh/"><i class="fas fa-home"></i>Trang chủ</a>
+            <a href="<?= $ADMIN_URL ?>/trang-chinh/"><i class="fa-solid fa-house-chimney"></i> Trang chủ</a>
         </li>
         <!-- Danh mục -->
         <li>
@@ -46,7 +56,7 @@
 
         <!-- tin tức -->
         <li>
-            <a href="#produ" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Tin tức 
+            <a href="#produ" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fa-solid fa-newspaper"></i> Tin tức 
                 <i class="fas fa-angle-right float-xl-right"></i>
             </a>
             <ul class="collapse list-unstyled" id="produ">
@@ -77,17 +87,17 @@
             </ul>
         </li>
         <li>
-            <a href="<?= $ADMIN_URL ?>/binh-luan/"> <i class="fas fa-comments"></i>Bình luận</a>
+            <a href="<?= $ADMIN_URL ?>/binh-luan/"> <i class="fas fa-comments"></i> Bình luận</a>
         </li>
         <li>
-            <a href="<?= $ADMIN_URL ?>/thong-ke/"><i class="fas fa-chart-line"></i></i>Thống kê</a>
+            <a href="<?= $ADMIN_URL ?>/thong-ke/"><i class="fa-solid fa-chart-pie"></i> Thống kê</a>
         </li>
         <li>
-            <a href="#"><i class="fas fa-shipping-fast"></i></i>Đơn hàng</a>
+            <a href="#"><i class="fa-solid fa-truck"></i> Đơn hàng</a>
         </li>
 
         <li>
-            <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
+            <a href="#"><i class="fa-solid fa-gears"></i> Cài đặt</a>
         </li>
     </ul>
 </nav>

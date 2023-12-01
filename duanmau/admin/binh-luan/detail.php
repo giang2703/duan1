@@ -1,14 +1,62 @@
-<div class="container">
+<style>
+        /* CSS để tạo kiểu cho danh sách */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;  
+            font-weight: bold; 
+            color: #C19FD6 ;  
+        }
+
+        .btn-success,
+        .btn-primary,
+        .btn-danger{
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #B495C9;
+        }
+
+        .btn-success:hover,
+        .btn-primary:hover,
+        .btn-danger:hover {
+            background-color: #B495C9;
+            border: 1px solid #B495C9;
+
+        }
+
+        .thead{
+            background-color: #d8c3e5;
+            color: #262626;
+        }
+
+    </style> 
+
+<div class="container mt-5">
     <div class="page-title">
 
-        <h4 class="mt-5 font-weight-bold text-center">Chi tiết bình luận</h4>
+        <h2>Chi tiết bình luận</h2>
     </div>
-    <div class="box box-primary">
+
         <div class="box-body">
             <form action="?btn_delete_all" method="post" class="table-responsive"> 
             <!-- method="post" để gửi dữ liệu lên máy chủ -->
                 <button type="submit" class="btn btn-danger mb-1" id="deleteAll" onclick="return checkDelete()">
-                    Xóa mục đã chọn</button> <i class="ml-5">hàng hóa: <b><?= $items[0]['ten_hh'] ?></b></i> <!-- nó hiển thị giá trị của $items[0]['ten_hh']. 
+                    Xóa mục đã chọn</button> <i class="ml-5">Hàng Hóa: <b><?= $items[0]['ten_hh'] ?></b></i> <!-- nó hiển thị giá trị của $items[0]['ten_hh']. 
                     Điều này dựa vào dữ liệu trong mảng $items để hiển thị tên hàng hóa liên quan đến bình luận. -->
 
                     <!-- onclick="return checkDelete()": Đây là một sự kiện JavaScript. 
@@ -17,7 +65,7 @@
                     <!-- chung lại thì dòng lệnh trên dùng để xóa bình trong hàng-->
 
                 <table width="100%" class="table table-hover table-bordered text-center">
-                    <thead class="thead-dark">
+                    <thead class="thead">
                         <tr>
                             <th><input type="checkbox" id="select-all"></th>
                             <th>Đánh giá</th>
@@ -84,8 +132,8 @@
 
                     </ul>
                 </div>
-                <a class="btn btn-dark" href="index.php">Quay lại</a>
+                <a href="index.php"><input type="button" class="btn btn-success" value="Quay lại"></a>
             </form>
         </div>
-    </div>
+
 </div>

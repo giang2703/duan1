@@ -31,11 +31,55 @@ function drawChart() { // vẽ biểu đồ gg nó lấy 1 tham số data
 }
 </script>
 </head>
+<style>
+        /* CSS để tạo kiểu cho danh sách */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;  
+            font-weight: bold; 
+            color: #C19FD6 ;  
+        }
+
+        .btn-success,
+        .btn-primary,
+        .btn-danger{
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #B495C9;
+        }
+
+        .btn-success:hover,
+        .btn-primary:hover,
+        .btn-danger:hover {
+            background-color: #B495C9;
+            border: 1px solid #B495C9;
+
+        }
+
+    </style>
 <body>
-    <h3>BIỂU ĐỒ THỐNG KÊ</h3>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
-    <!-- kích thước tỉ lệ biểu đồ -->
+    <div class="container mt-5">
+        <h2>BIỂU ĐỒ THỐNG KÊ</h2>
+        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+        <!-- kích thước tỉ lệ biểu đồ -->
+        <a href="index.php?list" class="btn btn-success "> Quay lại </a>
+    </div>
 </body>
 
 </html>

@@ -1,12 +1,19 @@
 <?php
 $totalAll = 0; // Khởi tạo biến $totalAll để tính tổng giá trị của giỏ hàng
+$tt=0;
 
 ?>
-<!-- Hiển thị tiêu đề "Giỏ hàng" -->
-<h5 class="alert-info mb-3 pt-3 pb-3 pl-sm-4 shadow-sm text-center" style="margin-top: 5rem; margin-bottom: 0rem">Giỏ
-    hàng</h5>
 
-<div class="container">
+
+
+
+
+<br>
+<div class="container border " style="border-radius: 5px;">
+    <h5 class="alert  mb-3 pt-3 pb-3 pl-sm-4 shadow-sm text-center"
+        style="margin-top: 5rem; margin-bottom: 0; font-weight: bold; background-color: #e4d5ed ; color: #aa7bc7;">
+        GIỎ HÀNG
+    </h5>
 
     <?php
     // Bước 1: Kiểm tra nếu tồn tại giỏ hàng trong session ($_SESSION['cart'])
@@ -48,13 +55,26 @@ $totalAll = 0; // Khởi tạo biến $totalAll để tính tổng giá trị c�
                         </form>
                     </td>
                      <!-- Thành tiền của sản phẩm -->
-                    <td> <span class="thanh_tien_sp"></span> đ</td>
+                     <?php
+            $tt = 0; // Khởi tạo biến $totalAll để tính tổng giá trị của giỏ hàng
 
+            // Tính tổng tiền giỏ hàng
+            if (isset($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $index => $item) {
+                    // Tính tổng tiền cho từng sản phẩm và cộng vào tổng tổng $totalAll
+                    $tt += $item['sl'] * $item['don_gia'] -$item['giam_gia'];
+                }
+            }
+
+            ?>
+
+                    <td> <span class="thanh_tien_sp"></span><?= number_format($tt, 0, ".") ?></td>
+                        
                     <!-- Nút xóa sản phẩm khỏi giỏ hàng -->
                     <td class="pt-1 m-auto">
                         <a onclick="return confirm('Bạn chắc chắn muốn xóa k??');"
                             href="<?= $SITE_URL . "/cart/delete-cart.php?act=delete&id=" . $index ?>"
-                            class="btn btn-outline-danger"> <i class="fas fa-trash-alt "></i></a>
+                            class="btn btn-outline-danger"> <i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <!-- phân trang -->
@@ -69,7 +89,7 @@ $totalAll = 0; // Khởi tạo biến $totalAll để tính tổng giá trị c�
             if (isset($_SESSION['cart'])) {
                 foreach ($_SESSION['cart'] as $index => $item) {
                     // Tính tổng tiền cho từng sản phẩm và cộng vào tổng tổng $totalAll
-                    $totalAll += $item['sl'] * $item['don_gia'];
+                    $totalAll += $item['sl'] * $item['don_gia'] -$item['giam_gia'];
                 }
             }
 
@@ -77,8 +97,8 @@ $totalAll = 0; // Khởi tạo biến $totalAll để tính tổng giá trị c�
 
             <tfoot id="tongdonhang">
                 <tr class="text-center">
-                    <th colspan="5">Tổng thành tiền: </th>
-                    <td class="  text-danger font-weight-bold"><span id="tong_thanh_tien"><?= number_format($totalAll, 0, ".") ?></span> đ</td>
+                    <th colspan="5">Tổng tiền: </th>
+                    <td class="  text-danger font-weight-bold"><span id="tong_tien"><?= number_format($totalAll, 0, ".") ?></span> đ</td>
                     <td></td>
                 </tr>
                 <tr class="text-right">

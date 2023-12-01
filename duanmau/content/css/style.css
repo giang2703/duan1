@@ -565,12 +565,13 @@ figure {
 
 /* ===================Footer=================== */
 footer {
-    background: #B784B6;
+    background: #fff;
     padding: 40px;
+    box-shadow: 0px -1px 10px 0px #8D7AB7;
 }
 
 footer a {
-    color: #f8f9fa !important;
+    color: #5c5a5a !important;
 }
 
 /*-----------------------------------========================== Preloader */
