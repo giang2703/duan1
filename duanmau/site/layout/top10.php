@@ -3,7 +3,7 @@
         <h6 class="mb-0">
             <a class="text-white d-block collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
                 aria-controls="collapseTwo">
-                <i class="fas fa-heart text-danger"></i> Top 10 yêu thích
+                <i class="fas fa-heart text-danger"></i> BEAUTY
             </a>
         </h6>
     </div>

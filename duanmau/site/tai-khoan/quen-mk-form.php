@@ -1,4 +1,14 @@
 <!-- ============================ COMPONENT LOGIN   ================================= -->
+<style>
+    .reset{
+        background-color: #c097c6;
+        color: #fff;
+    }
+
+    .reset:hover{
+        background-color: #b686bd;
+    }
+</style>
 <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
     <div class="card-body">
         <h4 class="card-title mb-4">Đăng nhập</h4>
@@ -6,7 +16,7 @@
         <form action="<?= $SITE_URL ?>/tai-khoan/quen-mk.php" method="POST" id="form_quen_mk">
 
             <div class="form-group">
-                <label for="username" class="form-label">Tài khoản(tên đăng nhập)</label>
+                <label for="username" class="form-label">Tài khoản (tên đăng nhập)</label>
                 <input name="ma_kh" class="form-control" id="username" placeholder="Username" type="text">
             </div> <!-- form-group// -->
 
@@ -19,7 +29,7 @@
 
 
             <div class="form-group">
-                <button type="submit" name="btn_forgot_pass" class="btn btn-primary btn-block"> Lấy mật khẩu </button>
+                <button type="submit" name="btn_forgot_pass" class="btn reset btn-block"> Lấy mật khẩu </button>
             </div> <!-- form-group// -->
         </form>
 

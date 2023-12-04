@@ -6,19 +6,19 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h1 class="fw-bolder mb-1">Chào mừng bạn đến với Bài viết</h1>
+                    <h1 class="fw-bolder mb-1"> Bài viết</h1>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Đăng vào ngày 10 tháng 10 năm 2023 bởi Admin</div>
+                    <div class="text-muted fst-italic mb-2"></div>
                     <!-- Post categories-->
-                    <a class="badge text-decoration-none link-light" href="#!">Việt phục truyền thống</a>
-                    <a class="badge text-decoration-none link-light" href="#!">Việt phục cách tân</a>
+                    <a class="badge text-decoration-none link-light" href="#!">Beauty </a>
+                    <a class="badge text-decoration-none link-light" href="#!">Fashion</a>
                 </header>
                 <!-- Preview image figure-->
                 <figure class="mb-4"><img class="img-fluid rounded" src="../../content/images/aq.png" alt="..." />
                 </figure>
                 <!-- Post content-->
                 <section class="mb-5">
-                    <p class="fs-5 mb-4">~Chưa có thông tin gì ở đây~</p>
+                    <p class="fs-5 mb-4"></p>
                 </section>
             </article>
             <!-- Comments section-->
@@ -60,17 +60,16 @@
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!">truyền thống</a>
+                                    <a href="#!">Làm đẹp</a>
                                 </li>
-                                <li><a href="#!">Việt phục </a></li>
-                                <li><a href="#!">Việt phục cách tân</a></li>
+                                <li><a href="#!">Thời trang </a></li>
+                                <li><a href="#!"></a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Áo giao lĩnh </a></li>
-                                <li><a href="#!">Áo nhật bình</a></li>
-                                <li><a href="#!">Áo đối khâm</a></li>
+                                <li><a href="#!"></a></li>
+                                
                             </ul>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
             <ul class="fa-ul mb-4 ml-0">
                 <li id="mail-address">
                     <!--               Replace with your email address -->
-                    <i class="fas fa-envelope-open mr-2 contact-icons"></i>BHvietphuc@gmail.com</a>
+                    <i class="fas fa-envelope-open mr-2 contact-icons"></i>Beautyfashion@gmail.com</a>
                 </li>
                 <li>
                     <i class="fas fa-mobile-alt mr-2 contact-icons"></i>0326357293

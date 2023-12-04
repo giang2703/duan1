@@ -3,7 +3,7 @@
         <h6 class="mb-0">
             <a class="text-white d-block collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false"
                 aria-controls="collapseThree">
-                <i class="fab fa-slack"></i> Sản phẩm đặc biệt
+                <i class="fab fa-slack"></i> FASHION
             </a>
         </h6>
     </div>

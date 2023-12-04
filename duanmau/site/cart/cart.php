@@ -114,12 +114,14 @@ $tt=0;
                 </tr>
             </tfoot>
         </table>
+        <a style="color: #333;" class="btn" href="<?= $SITE_URL ?>/trang-chinh/index.php" > Về trang chủ</a>
+
     </div>
     <?php } else { ?>
         <!-- Hiển thị thông báo khi giỏ hàng trống -->
     <div class="row  m-1 pb-5">
-        <h6 class="col-12">Không tồn tại sản phẩm nào trong giỏ hàng </h6>
-        <a class="btn btn-outline-dark col-12" href="<?= $ROOT_URL ?>"> Về trang chủ</a>
+        <h6 class="col-12 text-center">Không tồn tại sản phẩm nào trong giỏ hàng </h6>
+        <a style="color: #333;" class="btn" href="<?= $SITE_URL ?>/trang-chinh/index.php" > Về trang chủ</a>
     </div>
     <?php } ?>
 </div>

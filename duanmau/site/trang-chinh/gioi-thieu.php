@@ -3,7 +3,7 @@
         <div class="parallax text-center" style="background-image:url(https://afamilycdn.com/150157425591193600/2020/8/7/11-159677847958521168642.jpg);">
             <div class="parallax-pattern-overlay">
                 <div class="container text-center text-white" style="height:650px;padding-top:15%;">
-                    <h2 class="display-2 shadow font-weight-bold">BH-Shop trang phục truyền thống</h2>
+                    <h2 class="display-2 shadow font-weight-bold">Beauty Fashion </h2>
                     <h3 class="learn shadow font-weight-bold"></h3>
                 </div>
             </div>
@@ -17,10 +17,10 @@
                     <div class="heading text-center">
                         <img class="dividerline"
                             src="http://www.pixempire.com/images/preview/horizontal-line-icon-1.jpg" alt="">
-                        <h2 class="text-danger">BH việt phục</h2>
+                        <h2 class="text-danger">Beauty Fashion</h2>
                         <img class="dividerline"
                             src="http://www.pixempire.com/images/preview/horizontal-line-icon-1.jpg" alt="">
-                        <h4>Chưa có thông tin!</h4>
+                        <h4>!</h4>
                     </div>
                 </div>
             </div>

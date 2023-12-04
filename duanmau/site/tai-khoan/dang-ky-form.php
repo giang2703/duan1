@@ -1,9 +1,17 @@
- <!-- ============================ COMPONENT REGISTER ================================= -->
- <div class="card mb-4 mx-auto mt-3" style="max-width: 500px;">
+<style>
+    .reset{
+        background-color: #c097c6;
+        color: #fff;
+    }
+
+    .reset:hover{
+        background-color: #b686bd;
+    }
+</style>
+
+<div class="card mb-4 mx-auto mt-3" style="max-width: 500px;">
      <article class="card-body">
-         <header class="mb-4">
-             <h4 class="card-title">Đăng ký</h4>
-         </header>
+     <h4 class="card-title mb-4 ">Đăng ký</h4>
 
          <!-- FORM -->
          <form action="<?= $SITE_URL ?>/tai-khoan/dang-ky.php" method="post" enctype="multipart/form-data"
@@ -44,7 +52,7 @@
              </div>
              <i class="text-danger"><?= $MESSAGE ?></i>
              <div class="form-group">
-                 <button type="submit" name="btn_register" class="btn btn-primary btn-block"> Đăng ký </button>
+                 <button type="submit" name="btn_register" class="btn reset btn-block"> Đăng ký </button>
              </div> <!-- form-group// -->
              <input type="hidden" name="kich_hoat" value="1">
              <input type="hidden" name="vai_tro" value="0">

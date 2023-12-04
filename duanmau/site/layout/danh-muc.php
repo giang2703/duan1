@@ -1,23 +1,33 @@
-<div class="card">
-    <div class="card-header bg-primary text-white text-uppercase" role="tab" id="headingOne">
-        <h6 class="mb-0">
-            <a class="text-white d-block" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
-                aria-controls="collapseOne">
-                <i class="fa fa-list"></i> Danh mục
-            </a>
-        </h6>
-    </div>
+<style>
+.category_1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 1); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
 
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+.category_1 a {
+    color: black;
+    text-decoration: none; /* Loại bỏ gạch chân dưới link */
+    margin-right: 5px; 
+}
 
-        <ul class="list-group category_block">
-            <?php foreach ($ds_loai as $loai) : ?>
-            <li class="list-group-item">
-                <a class="d-block"
-                    href="<?= $SITE_URL . "/hang-hoa/liet-ke.php?ma_loai=" . $loai['ma_loai'] ?>"><?= $loai['ten_loai'] ?></a>
-            </li>
-            <?php endforeach ?>
+.category_1 a:hover {
+    color: #B495C9;
+}
 
-        </ul>
-    </div>
+.category_1 a:not(:last-child)::after {
+    content: "|"; 
+    margin-left: 5px; /* Khoảng cách giữa kí tự "|" và link */
+    color: #000; 
+}
+</style>
+
+<div class="category_1">
+<a href="<?= $SITE_URL ?>/trang-chinh/index.php?san-pham"> Tất cả </a>
+    <?php foreach ($ds_loai as $loai) : ?>
+        
+        <a href="<?= $SITE_URL . "/hang-hoa/liet-ke.php?ma_loai=" . $loai['ma_loai'] ?>"><?= $loai['ten_loai'] ?></a>
+    <?php endforeach ?>
 </div>

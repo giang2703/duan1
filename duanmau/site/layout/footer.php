@@ -4,6 +4,15 @@
     h5{
         color: #000;
         font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    ul.list-unstyled {
+        margin-bottom: 20px;
+    }
+
+    ul.list-unstyled li {
+        margin-bottom: 8px;
     }
 </style>
 <div class="container">
@@ -12,7 +21,8 @@
             <h5>CHÚNG TÔI</h5>
             <hr class="bg-black mb-2 mt-0 d-inline-block mx-auto w-25">
             <p class="mb-0" style="color: #5c5a5a;">
-            FS cung cấp thông tin và order sản phẩm là một lựa chọn tiện lợi và hiệu quả cho những người yêu thích thời trang. 
+            FS cung cấp thông tin và order sản phẩm là một lựa chọn tiện lợi và hiệu quả cho những người yêu thích thời trang 
+            <i class="fa-solid fa-bag-shopping" style="color: #C19FD6;"></i> 
             </p>
         </div>
 
@@ -20,9 +30,9 @@
             <h5>THÔNG TIN</h5>
             <hr class="bg-black mb-2 mt-0 d-inline-block mx-auto w-25">
             <ul class="list-unstyled">
-                <li><a href=""><i class="fas fa-map-marker-alt"></i> Hoà Minh-Liên Chiểu-Đà Nẵng</a></li>
-                <li><a href=""><i class="fa-solid fa-phone"></i> 0326357293</a></li>
-                <li><a href=""><i class="fas fa-envelope"></i> fashion@gmail.com</a></li>
+                <li><a href=""><i class="fas fa-map-marker-alt" style="color: #CA0E00;"></i> Hoà Minh-Liên Chiểu-Đà Nẵng</a></li>
+                <li><a href=""><i class="fa-solid fa-phone" style="color: #395691;"></i> 0326357293</a></li>
+                <li><a href=""><i class="fas fa-envelope" style="color: #E6BB3C;"></i> fashion@gmail.com</a></li>
             </ul>
         </div>
 
@@ -43,26 +53,28 @@
             <ul class="list-unstyled">
                 <li>
                     <a href="https://www.youtube.com/" class="custom-link">
-                    <i class="fa-brands fa-youtube"></i> YouTube
+                    <i class="fa-brands fa-youtube" style="color: red;"></i> YouTube
                 </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/" class="custom-link">
-                    <i class="fa-brands fa-facebook"></i> Facebook
+                    <i class="fa-brands fa-facebook" style="color: #2547FA;"></i> Facebook
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/" class="custom-link">
-                    <i class="fa-brands fa-instagram"></i> Instagram
+                    <i class="fa-brands fa-instagram" style=" color: #EB5542;"></i> Instagram
                     </a>
                 </li>
             </ul>
         </div>
         <div class="col-12 copyright mt-3">
             <p class="float-right">
-                <a class="btn " href="<?= $SITE_URL ?>/trang-chinh/index.php">Về đầu trang</a>
+                <a class="btns " href="<?= $SITE_URL ?>/trang-chinh/index.php">Về đầu trang</a>
             </p>
 
         </div>
     </div>
+    <hr>
+    <p style="color: #5c5a5a;text-align: center;">@2023 Copyright: <b>Beautyfashion.com</b></p>
 </div>

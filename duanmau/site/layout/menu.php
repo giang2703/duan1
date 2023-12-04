@@ -48,7 +48,7 @@
                 </li>
             </ul>
 
-            <form class="d-flex mx-auto my-2 my-lg-0">
+            <form class="d-flex mx-auto my-2 my-lg-0" action="<?= $SITE_URL ?>/hang-hoa/liet-ke.php" method="POST">
                 <input class="form-control me-2 custom-search" type="search" placeholder="Tìm kiếm..." aria-label="Search">
             </form>
 

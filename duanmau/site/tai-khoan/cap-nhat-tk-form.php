@@ -1,5 +1,5 @@
 <div class="container">
-    <h5 class="alert-dark my-3 py-3 shadow-sm text-center">Cập nhật tài khoản</h5>
+    <h4 class="my-3 py-3 shadow-sm text-center" style="background-color: #f4edf5; color: #b686bd ;">Cập nhật tài khoản</h4>
     <div class="row m-1 pb-5">
         <div class="col-lg-6 col-md p-6">
             <img src="<?= $UPLOAD_URL . '/users/' . $hinh ?>" class="img-fluid" alt="">

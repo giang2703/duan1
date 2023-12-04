@@ -1,4 +1,30 @@
 <!-- ============================ COMPONENT LOGIN   ================================= -->
+<style>
+    .reset{
+        background-color: #c097c6;
+        color: #fff;
+    }
+
+    .reset:hover{
+        background-color: #b686bd;
+    }
+
+    .btn-facebook{
+        background-color: #4c8fca;
+    }
+
+    .btn-facebook:hover{
+        background-color: #3d85c6;
+    }
+
+    .btn-google{
+        background-color: #d43e32;
+    }
+
+    .btn-google:hover{
+        background-color: #CA0E00;
+    }
+</style>
 <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
     <div class="card-body">
         <h4 class="card-title mb-4">Đăng nhập</h4>
@@ -30,7 +56,7 @@
             </div> <!-- form-group form-check .// -->
 
             <div class="form-group">
-                <button type="submit" name="btn_login" class="btn btn-primary btn-block"> Đăng nhập </button>
+                <button type="submit" name="btn_login" class="btn reset btn-block"> Đăng nhập </button>
             </div> <!-- form-group// -->
         </form>
 
