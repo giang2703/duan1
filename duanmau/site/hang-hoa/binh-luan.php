@@ -1,8 +1,23 @@
+<style>
+    .reset{
+        background-color: #c097c6;
+        color: #fff;
+    }
+
+    .reset:hover{
+        background-color: #b686bd;
+        color: #fff;
+
+    }
+</style>
+
 <div class="col-12" id="reviews">
     <div class="card border-light mb-3">
          <!-- Phần tiêu đề "Đánh giá" -->
-        <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-comment"></i> Đánh giá
+        <div class=" text-uppercase" style="padding: 10px;color: #b686bd ;">
+            <i class="fa fa-comment"></i> Đánh giá
         </div>
+
         <div class="card-body">
             <!-- Vòng lặp để hiển thị danh sách bình luận -->
             <?php foreach ($binh_luan_list as $bl) : ?>
@@ -50,29 +65,29 @@
 
         ?>
          <!-- Form đăng bình luận -->
-        <div class="comment-box text-center">
-            <h4>Để lại bình luận</h4>
+        <div class="comment-box">
+            <h4>Đánh giá</h4>
             <form action="" method="POST">
                 <!-- Thang đánh giá bằng số sao -->
-                <div class="rating">
-                    <input type="radio" name="rating" value="5" id="5" checked>
-                    <label for="5">☆</label>
+                <div class="rating" > 
+                    <input type="radio" name="rating" value="5" id="5" checked >
+                    <label for="5" style="color: #B495C9;">☆</label>
                     <input type="radio" name="rating" value="4" id="4">
-                    <label for="4">☆</label>
+                    <label for="4" style="color: #B495C9;">☆</label>
                     <input type="radio" name="rating" value="3" id="3">
-                    <label for="3">☆</label>
+                    <label for="3" style="color: #B495C9;">☆</label>
                     <input type="radio" name="rating" value="2" id="2">
-                    <label for="2">☆</label>
+                    <label for="2" style="color: #B495C9;">☆</label>
                     <input type="radio" name="rating" value="1" id="1">
-                    <label for="1">☆</label>
+                    <label for="1" style="color: #B495C9;">☆</label>
                 </div>
                 <!-- Ô nhập nội dung bình luận -->
-                <div class="comment-area">
-                    <textarea class="form-control" name="noi_dung" placeholder="Nội dung..." rows="4"></textarea>
+                <div class="comment-area" >
+                    <textarea class="form-control" name="noi_dung" placeholder="Nội dung..." rows="4" style="border: 1px solid #B495C9;"></textarea>
                 </div>
                 <!-- Nút đăng bình luận -->
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-success send px-5">Đăng bình luận
+                <div class="text-right mt-4">
+                    <button type="submit" class="btn reset send px-5">Đăng bình luận
                         <i class="fa fa-long-arrow-right ml-1"></i>
                     </button>
                 </div>

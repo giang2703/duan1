@@ -23,7 +23,7 @@ function hang_hoa_delete($ma_hh)
     } else {
         pdo_execute($sql, $ma_hh);
     }
-}
+}  
 //hàm lấy danh sách tất cả hàng hóa
 function hang_hoa_select_all()
 {

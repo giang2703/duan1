@@ -1,19 +1,38 @@
 <!-- Product-detail -->
+<style>
+    .add_to_cart_block {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-<div class="container mt-3">
-    <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $ROOT_URL ?>">Trang chủ</a></li>
-                    <li class="breadcrumb-item"><a href="<?= $SITE_URL . '/hang-hoa/liet-ke.php' ?>">Sản phẩm</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
+.card {
+    flex: 1;
+    margin: 10px; /* Để tạo khoảng cách giữa các ô */
+}
+
+.reset{
+        background-color: #c097c6;
+        color: #fff;
+    }
+
+    .reset:hover,
+    .them:hover{
+        background-color: #b686bd;
+        color: #fff;
+
+    }
+
+    .them{
+        border-color: #b686bd;
+        color: #b686bd;        
+    }
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <div class="container">
+    <br>
     <div class="row">
         <!-- Image -->
         <div class="col-12 col-lg-6">
@@ -22,7 +41,7 @@
                     <a href="#" data-toggle="modal" data-target="#productModal">
                         <!-- Ảnh sản phẩm -->
                         <img class="img-fluid" src="<?= $UPLOAD_URL . "/products/" . $hinh ?>" />
-                        <p class="text-center">Phóng to ảnh</p>
+
                     </a>
                 </div>
             </div>
@@ -33,6 +52,25 @@
             <div class="card bg-light mb-3">
                 <div class="card-body text-center">
                     <h4 class="card-title"><?= $ten_hh ?></h4>
+                    <div class="reviews_product p-3 mb-2 ">
+                        
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        (4.9/5) <br>
+                        3 reviews
+                        <a class="pull-right" href="#reviews">Xem tất cả đánh giá</a>
+                    </div>
+
+                    <div>
+                    <p style="color: #46DBB5;"><i class="fa-solid fa-truck"></i> Miễn phí vận chuyển</p>
+                    <p ><i class="fa-regular fa-face-grin-stars"></i> Đảm bảo chất lượng</p>
+                    </div>
+
+
+
                     <!-- Giá sản phẩm -->
                     <?php
                     if ($don_gia > 0) {
@@ -42,18 +80,17 @@
                     }
                     ?>
                     <div class="product-price">
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <del class="d-block"><?= number_format($don_gia, 0, ',') ?>đ</del>
+                        <div class="col d-flex justify-content-center " style="font-size: 25px;">
+                            <del class="d-block"><?= number_format($don_gia, 0, ',') ?><sup>đ</sup></del>
                             <p class="text-danger font-weight-bold d-block ml-3 mb-0">
-                                <?= number_format($don_gia - $giam_gia, 0, ',') ?>đ</p>
+                                <?= number_format($don_gia - $giam_gia, 0, ',') ?><sup>đ</sup></p>
                         </div>
                     </div>
 
-                    <!-- <p class="price_discounted">149.90 $</p> -->
                     <form method="get" action="cart.html">
 
                         <div class="form-group">
-                            <label>Quantity :</label>
+                            <label></label>
                             <div class="input-group mb-3 justify-content-center">
                                 <div class="input-group-prepend">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number"
@@ -71,29 +108,17 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="cart.html" class="btn btn-danger btn-lg btn-block text-uppercase">
-                            <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                        
+                        <div>
+                        <a href="<?= $SITE_URL . "/cart/add-cart.php?id=" . $item['ma_hh'] ?>" class="btn them btn-block">
+                            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng
                         </a>
+                        <a href="cart.html" class="btn reset btn-block"> Mua ngay
+                        </a>
+                        </div>
                     </form>
-                    <div class="product_rassurance">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-truck fa-2x"></i><br />Giao hàng nhanh</li>
-                            <li class="list-inline-item"><i class="fa fa-credit-card fa-2x"></i><br />Bảo mật
-                            </li>
-                            <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br />09820841
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="reviews_product p-3 mb-2 ">
-                        3 reviews
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        (4/5)
-                        <a class="pull-right" href="#reviews">Xem tất cả đánh giá</a>
-                    </div>
+                    
+                    
 
                 </div>
             </div>
@@ -104,7 +129,7 @@
         <!-- Description -->
         <div class="col-12">
             <div class="card border-light mb-3">
-                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-align-justify"></i>
+                <div class=" text-uppercase" style="padding: 10px;background-color: #f4edf5;color: #b686bd ;">
                     Mô tả sản phẩm
                 </div>
                 <div class="card-body">
@@ -138,7 +163,7 @@
                 <img class="img-fluid" src="<?= $UPLOAD_URL . "/products/" . $hinh ?>" />
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>

@@ -93,11 +93,7 @@
             <a href="<?= $ADMIN_URL ?>/thong-ke/"><i class="fa-solid fa-chart-pie"></i> Thống kê</a>
         </li>
         <li>
-            <a href="#"><i class="fa-solid fa-truck"></i> Đơn hàng</a>
-        </li>
-
-        <li>
-            <a href="#"><i class="fa-solid fa-gears"></i> Cài đặt</a>
+            <a href="<?= $ADMIN_URL ?>/don_hang/"><i class="fa-solid fa-truck"></i> Đơn hàng</a>
         </li>
     </ul>
 </nav>

@@ -1,60 +1,34 @@
  <!-- Body -->
  <style>
-        /* CSS để tạo hiệu ứng mờ dần cho phần dưới của hình ảnh */
-        .half-opacity {
-            position: relative;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
-            margin-bottom: 1000px;
-        }
-
-        .half-opacity::after {
-            content: '';
-            position: absolute;
-            top: 50%; /* Hiển thị gradient từ 50% trên cùng của hình ảnh */
-            left: 0;
-            width: 100%;
-            height: 50%; /* Chiều cao của gradient */
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradient mờ dần */
-            pointer-events: none; /* Đảm bảo sự kiện chuột không bị chặn */
-        }
-
-        /* CSS cho container chứa sản phẩm */
-        .containers {
-            position: absolute;
-            top: 160%; /* Hiển thị container ở 1/3 phía trên của hình ảnh */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%; /* Điều chỉnh chiều rộng của container */
-            max-width: 1200px; /* Giới hạn chiều rộng tối đa nếu cần */
-        }
-
-        /* .cards{
-            height: 350px;
-            object-fit: cover;
-            padding-left: 20px;
-            padding-top: 20px;
-            padding-right: 20px;
-            border-radius: 10px 10px 0 0; 
-        } */
-
-     /* .product-card .card-img-overlay {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
+    /* CSS để tạo hiệu ứng mờ dần cho phần dưới của hình ảnh */
+    .half-opacity {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 1200px;
     }
 
-    .product-card:hover .card-img-overlay {
-        display: block;
-    }  */
+    .half-opacity::after {
+        content: '';
+        position: absolute;
+        top: 50%; /* Hiển thị gradient từ 50% trên cùng của hình ảnh */
+        left: 0;
+        width: 100%;
+        height: 50%; /* Chiều cao của gradient */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradient mờ dần */
+        pointer-events: none; /* Đảm bảo sự kiện chuột không bị chặn */
+    }
 
+    /* CSS cho container chứa sản phẩm */
+    .containers {
+        position: absolute;
+        top: 160%; /* Hiển thị container ở 1/3 phía trên của hình ảnh */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Điều chỉnh chiều rộng của container */
+        max-width: 1200px; /* Giới hạn chiều rộng tối đa nếu cần */
+    }
     .ten{
         color: #333;
         text-transform: capitalize;
@@ -84,9 +58,9 @@
         transition: transform 0.3s ease-in-out;
         border-radius: 5px;
         max-width: 250px; /* Chiều rộng tối đa */
-    max-height: 300px; /* Chiều cao tối đa */
-    width: auto; /* Cho phép hình ảnh tự điều chỉnh chiều rộng tối đa */
-    height: auto; /* Cho phép hình ảnh tự điều chỉnh chiều cao tối đa */
+        max-height: 300px; /* Chiều cao tối đa */
+        width: auto; /* Cho phép hình ảnh tự điều chỉnh chiều rộng tối đa */
+        height: auto; /* Cho phép hình ảnh tự điều chỉnh chiều cao tối đa */
     }
 
     .product-thumb img:hover {
@@ -113,6 +87,7 @@
             </div>
 
     </div>
+    
     <div class="row">
         <div class="card-body">
         <!-- Sản phẩm -->
@@ -129,6 +104,7 @@
                             }
 
                         ?>
+                        
                     <div class="col-12 col-md-6 col-lg-3 mt-3">
                         <div class="card text-center product-card pb-2">
                             
